@@ -42,6 +42,7 @@ const SignupForm = () => {
         password,
         password_confirmation: repassword,
       };
+      console.debug(result);
 
       const result = await fetchServices.postData(url, data);
 

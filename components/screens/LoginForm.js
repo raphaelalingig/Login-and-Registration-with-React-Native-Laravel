@@ -28,14 +28,10 @@ const LoginForm = () => {
       </Text>
     </TouchableOpacity>
   );
-  const handleLogin = async () => {
+  const handleLogin = async (values) => {
     try {
       const url = "http://192.168.1.15:8000/api/v1/login";
-      const data = {
-        email,
-        password,
-      };
-      const result = await fetchServices.postData(url, data);
+      const result = await fetchServices.postData(url, values);
 
       if (result.message != null) {
         showToast(result?.message);
