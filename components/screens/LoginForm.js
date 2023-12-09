@@ -30,7 +30,7 @@ const LoginForm = () => {
   );
   const handleLogin = async () => {
     try {
-      const url = "http://192.168.1.15/api/v1/login";
+      const url = "http://192.168.1.15:8000/api/v1/login";
       const data = {
         email,
         password,
